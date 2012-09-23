@@ -98,6 +98,8 @@ function receiveResponse(returned, domain){
 }
 if(BBQ && BBQ.areFeatures && BBQ.areFeatures('attachListener', 'isHostMethod')){
 	function checkIfUp(e){
+		var status = document.getElementById('status');
+		status.innerHTML = '<img src="./images/loader.gif" />';
 		if(BBQ.areFeatures('ajaxGet')){
 			var domain = document.forms[0].domain.value;
 			BBQ.ajaxGet('/api.php?url=' + domain, {
