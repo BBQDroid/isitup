@@ -65,7 +65,7 @@ require 'functions.php';
 	</form>
 </div>
 <!-- because jQuery is for wimps -->
-<script src="./scripts/BBQ.js"></script>
+<script src="/scripts/BBQ.js"></script>
 <script>
 function clearDomainInput(e){
 	if (e.cleared){return;}
@@ -100,7 +100,7 @@ if(BBQ && BBQ.areFeatures && BBQ.areFeatures('attachListener', 'isHostMethod')){
 	function checkIfUp(e){
 		if(BBQ.areFeatures('ajaxGet')){
 			var domain = document.forms[0].domain.value;
-			BBQ.ajaxGet('api.php?url=' + domain, {
+			BBQ.ajaxGet('/api.php?url=' + domain, {
 				success: function(returned){
 					receiveResponse(returned, domain);
 				}
