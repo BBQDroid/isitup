@@ -38,6 +38,16 @@ function easteregg($domain){
 		case 'canada':
 			$response = 'Hi Chad.';
 		break;
+		case 'Baskey':
+			$response = 'LEGALIZE CRYSTAL ZLOTY';
+		break;
+		case 'easteregg':
+		case 'easter egg':
+			$response = 'ORLY? TRY /help eastereggs';
+		break;
+		case '/help eastereggs':
+			$response = "<a href=\"http://goo.gl/v7dIR\">List of easter eggs</a>";
+		break;
 	}
 	return $response;
 }
