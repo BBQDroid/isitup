@@ -131,7 +131,9 @@ if(BBQ && BBQ.areFeatures && BBQ.areFeatures('attachListener', 'isHostMethod')){
 if(!empty($_REQUEST['url'])){
 	$url = ltrim($_REQUEST['url'], "/");
 	$url = str_replace("/", "//", $url);
-	echo "receiveResponse('".getResponse($url)."', '$url');\n";
+	$response = getResponse($url);
+	$url = htmlentities($url);
+	echo "receiveResponse('".$response."', '$url');\n";
 }
 ?>
 </script>
